@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/sidebar';
 import { DashboardHeader } from '@/components/dashboard/header';
 import { Icons } from '@/components/icons';
-import { LayoutDashboard, TrendingUp, DollarSign, Dog } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, DollarSign, Dog, Swords } from 'lucide-react';
 import Link from 'next/link';
 import { PetIndustryAnalysis } from '@/components/dashboard/pet-industry-analysis';
 
@@ -55,6 +55,14 @@ export default function PetIndustryPage() {
                 <Link href="/pet-industry">
                   <Dog />
                   <span>Pet Industry</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild tooltip="Competitor Analysis">
+                <Link href="/competitor-analysis">
+                  <Swords />
+                  <span>Competitor Analysis</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
