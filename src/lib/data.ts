@@ -94,6 +94,16 @@ const salesReportRawData = [
   { "date": "2024-_06-25", "product": "Product C", "units_sold": 80, "revenue": 7200, "region": "Germany" }
 ];
 
+const marketingCostRawData = {
+  "campaign": "Summer Pet Health",
+  "budget": 20000,
+  "channels": [
+    { "name": "Social Media", "spend": 8500, "conversions": 150, "revenue": 45000 },
+    { "name": "Search Ads", "spend": 7500, "conversions": 120, "revenue": 40000 },
+    { "name": "Email Marketing", "spend": 3000, "conversions": 200, "revenue": 55000 }
+  ]
+};
+
 
 export const supplyChainData = {
   kpiData,
@@ -102,4 +112,5 @@ export const supplyChainData = {
   metrics: JSON.stringify(metrics, null, 2),
   historicalData: JSON.stringify(historicalData, null, 2),
   salesReportData: JSON.stringify(salesReportRawData, null, 2),
+  marketingCostData: JSON.stringify(marketingCostRawData, null, 2),
 };

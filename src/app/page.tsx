@@ -15,7 +15,7 @@ import { InventoryLevelsChart } from '@/components/dashboard/inventory-levels-ch
 import { AiRecommendations } from '@/components/dashboard/ai-recommendations';
 import { supplyChainData } from '@/lib/data';
 import { Icons } from '@/components/icons';
-import { LayoutDashboard, TrendingUp, DollarSign, Dog, Swords, PieChart } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, DollarSign, Dog, Swords, PieChart, Coins } from 'lucide-react';
 import Link from 'next/link';
 
 export default function DashboardPage() {
@@ -76,6 +76,14 @@ export default function DashboardPage() {
                 <Link href="/market-share">
                   <PieChart />
                   <span>Market Share</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild tooltip="Marketing Cost">
+                <Link href="/marketing-cost">
+                  <Coins />
+                  <span>Marketing Cost</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>

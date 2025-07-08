@@ -12,9 +12,9 @@ import { DashboardHeader } from '@/components/dashboard/header';
 import { Icons } from '@/components/icons';
 import { LayoutDashboard, TrendingUp, DollarSign, Dog, Swords, PieChart, Coins } from 'lucide-react';
 import Link from 'next/link';
-import { MarketAnalysis } from '@/components/dashboard/market-analysis';
+import { MarketingCostAnalysis } from '@/components/dashboard/marketing-cost-analysis';
 
-export default function MarketAnalysisPage() {
+export default function MarketingCostPage() {
   return (
     <SidebarProvider>
       <Sidebar>
@@ -35,7 +35,7 @@ export default function MarketAnalysisPage() {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip="Market Analysis" isActive>
+              <SidebarMenuButton asChild tooltip="Market Analysis">
                 <Link href="/market-analysis">
                   <TrendingUp />
                   <span>Market Analysis</span>
@@ -75,7 +75,7 @@ export default function MarketAnalysisPage() {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip="Marketing Cost">
+              <SidebarMenuButton asChild tooltip="Marketing Cost" isActive>
                 <Link href="/marketing-cost">
                   <Coins />
                   <span>Marketing Cost</span>
@@ -88,7 +88,7 @@ export default function MarketAnalysisPage() {
       <SidebarInset>
         <DashboardHeader />
         <main className="p-4 md:p-6">
-          <MarketAnalysis />
+          <MarketingCostAnalysis />
         </main>
       </SidebarInset>
     </SidebarProvider>

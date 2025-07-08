@@ -7,3 +7,4 @@ import '@/ai/flows/sales-report-flow.ts';
 import '@/ai/flows/pet-industry-analysis-flow.ts';
 import '@/ai/flows/competitor-analysis-flow.ts';
 import '@/ai/flows/market-share-flow.ts';
+import '@/ai/flows/marketing-cost-flow.ts';
