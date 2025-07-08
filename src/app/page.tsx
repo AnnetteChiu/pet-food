@@ -15,7 +15,8 @@ import { InventoryLevelsChart } from '@/components/dashboard/inventory-levels-ch
 import { AiRecommendations } from '@/components/dashboard/ai-recommendations';
 import { supplyChainData } from '@/lib/data';
 import { Icons } from '@/components/icons';
-import { LayoutDashboard } from 'lucide-react';
+import { LayoutDashboard, TrendingUp } from 'lucide-react';
+import Link from 'next/link';
 
 export default function DashboardPage() {
   const { kpiData, ordersByCountry, inventoryLevels, metrics, historicalData } = supplyChainData;
@@ -31,9 +32,19 @@ export default function DashboardPage() {
         <SidebarContent>
           <SidebarMenu>
             <SidebarMenuItem>
-              <SidebarMenuButton tooltip="Dashboard" isActive>
-                <LayoutDashboard />
-                <span>Dashboard</span>
+               <SidebarMenuButton asChild tooltip="Dashboard" isActive>
+                <Link href="/">
+                  <LayoutDashboard />
+                  <span>Dashboard</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild tooltip="Market Analysis">
+                <Link href="/market-analysis">
+                  <TrendingUp />
+                  <span>Market Analysis</span>
+                </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
           </SidebarMenu>
