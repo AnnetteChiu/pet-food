@@ -84,10 +84,22 @@ const historicalData = {
   ]
 };
 
+const salesReportRawData = [
+  { "date": "2024-04-01", "product": "Product A", "units_sold": 150, "revenue": 7500, "region": "USA" },
+  { "date": "2024-04-05", "product": "Product B", "units_sold": 100, "revenue": 8000, "region": "Germany" },
+  { "date": "2024-04-12", "product": "Product A", "units_sold": 200, "revenue": 10000, "region": "USA" },
+  { "date": "2024-05-02", "product": "Product C", "units_sold": 50, "revenue": 4500, "region": "France" },
+  { "date": "2024-05-18", "product": "Product B", "units_sold": 120, "revenue": 9600, "region": "USA" },
+  { "date": "2024-06-10", "product": "Product A", "units_sold": 180, "revenue": 9000, "region": "UK" },
+  { "date": "2024-_06-25", "product": "Product C", "units_sold": 80, "revenue": 7200, "region": "Germany" }
+];
+
+
 export const supplyChainData = {
   kpiData,
   ordersByCountry,
   inventoryLevels,
   metrics: JSON.stringify(metrics, null, 2),
   historicalData: JSON.stringify(historicalData, null, 2),
+  salesReportData: JSON.stringify(salesReportRawData, null, 2),
 };

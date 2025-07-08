@@ -9,17 +9,12 @@ import {
   SidebarInset,
 } from '@/components/ui/sidebar';
 import { DashboardHeader } from '@/components/dashboard/header';
-import { KpiCard } from '@/components/dashboard/kpi-card';
-import { OrdersByCountryChart } from '@/components/dashboard/orders-by-country-chart';
-import { InventoryLevelsChart } from '@/components/dashboard/inventory-levels-chart';
-import { AiRecommendations } from '@/components/dashboard/ai-recommendations';
-import { supplyChainData } from '@/lib/data';
 import { Icons } from '@/components/icons';
 import { LayoutDashboard, TrendingUp, DollarSign } from 'lucide-react';
 import Link from 'next/link';
+import { SalesReport } from '@/components/dashboard/sales-report';
 
-export default function DashboardPage() {
-  const { kpiData, ordersByCountry, inventoryLevels, metrics, historicalData } = supplyChainData;
+export default function SalesReportPage() {
   return (
     <SidebarProvider>
       <Sidebar>
@@ -32,7 +27,7 @@ export default function DashboardPage() {
         <SidebarContent>
           <SidebarMenu>
             <SidebarMenuItem>
-               <SidebarMenuButton asChild tooltip="Dashboard" isActive>
+              <SidebarMenuButton asChild tooltip="Dashboard">
                 <Link href="/">
                   <LayoutDashboard />
                   <span>Dashboard</span>
@@ -48,7 +43,7 @@ export default function DashboardPage() {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip="Sales Report">
+              <SidebarMenuButton asChild tooltip="Sales Report" isActive>
                 <Link href="/sales-report">
                   <DollarSign />
                   <span>Sales Report</span>
@@ -60,28 +55,8 @@ export default function DashboardPage() {
       </Sidebar>
       <SidebarInset>
         <DashboardHeader />
-        <main className="p-4 md:p-6 grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-          {kpiData.map((kpi) => (
-            <KpiCard key={kpi.title} {...kpi} />
-          ))}
-
-          <div className="md:col-span-2 lg:col-span-4 xl:col-span-2 rounded-lg bg-card text-card-foreground shadow-sm p-4 md:p-6">
-            <h3 className="text-lg font-semibold mb-4">Orders by Country</h3>
-            <div className="h-[300px]">
-              <OrdersByCountryChart data={ordersByCountry} />
-            </div>
-          </div>
-          
-          <div className="md:col-span-2 lg:col-span-4 xl:col-span-2 rounded-lg bg-card text-card-foreground shadow-sm p-4 md:p-6">
-            <h3 className="text-lg font-semibold mb-4">Inventory Levels</h3>
-            <div className="h-[300px]">
-              <InventoryLevelsChart data={inventoryLevels} />
-            </div>
-          </div>
-          
-          <div className="md:col-span-2 lg:col-span-4">
-            <AiRecommendations metrics={metrics} historicalData={historicalData} />
-          </div>
+        <main className="p-4 md:p-6">
+          <SalesReport />
         </main>
       </SidebarInset>
     </SidebarProvider>

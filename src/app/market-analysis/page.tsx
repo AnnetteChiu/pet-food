@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/sidebar';
 import { DashboardHeader } from '@/components/dashboard/header';
 import { Icons } from '@/components/icons';
-import { LayoutDashboard, TrendingUp } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, DollarSign } from 'lucide-react';
 import Link from 'next/link';
 import { MarketAnalysis } from '@/components/dashboard/market-analysis';
 
@@ -39,6 +39,14 @@ export default function MarketAnalysisPage() {
                 <Link href="/market-analysis">
                   <TrendingUp />
                   <span>Market Analysis</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild tooltip="Sales Report">
+                <Link href="/sales-report">
+                  <DollarSign />
+                  <span>Sales Report</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
