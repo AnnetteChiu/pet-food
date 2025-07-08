@@ -12,9 +12,9 @@ import { DashboardHeader } from '@/components/dashboard/header';
 import { Icons } from '@/components/icons';
 import { LayoutDashboard, TrendingUp, DollarSign, Dog } from 'lucide-react';
 import Link from 'next/link';
-import { SalesReport } from '@/components/dashboard/sales-report';
+import { PetIndustryAnalysis } from '@/components/dashboard/pet-industry-analysis';
 
-export default function SalesReportPage() {
+export default function PetIndustryPage() {
   return (
     <SidebarProvider>
       <Sidebar>
@@ -43,7 +43,7 @@ export default function SalesReportPage() {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip="Sales Report" isActive>
+              <SidebarMenuButton asChild tooltip="Sales Report">
                 <Link href="/sales-report">
                   <DollarSign />
                   <span>Sales Report</span>
@@ -51,7 +51,7 @@ export default function SalesReportPage() {
               </SidebarMenuButton>
             </SidebarMenuItem>
             <SidebarMenuItem>
-              <SidebarMenuButton asChild tooltip="Pet Industry">
+              <SidebarMenuButton asChild tooltip="Pet Industry" isActive>
                 <Link href="/pet-industry">
                   <Dog />
                   <span>Pet Industry</span>
@@ -64,7 +64,7 @@ export default function SalesReportPage() {
       <SidebarInset>
         <DashboardHeader />
         <main className="p-4 md:p-6">
-          <SalesReport />
+          <PetIndustryAnalysis />
         </main>
       </SidebarInset>
     </SidebarProvider>

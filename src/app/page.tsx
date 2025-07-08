@@ -15,7 +15,7 @@ import { InventoryLevelsChart } from '@/components/dashboard/inventory-levels-ch
 import { AiRecommendations } from '@/components/dashboard/ai-recommendations';
 import { supplyChainData } from '@/lib/data';
 import { Icons } from '@/components/icons';
-import { LayoutDashboard, TrendingUp, DollarSign } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, DollarSign, Dog } from 'lucide-react';
 import Link from 'next/link';
 
 export default function DashboardPage() {
@@ -52,6 +52,14 @@ export default function DashboardPage() {
                 <Link href="/sales-report">
                   <DollarSign />
                   <span>Sales Report</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild tooltip="Pet Industry">
+                <Link href="/pet-industry">
+                  <Dog />
+                  <span>Pet Industry</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
