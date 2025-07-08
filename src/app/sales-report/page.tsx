@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/sidebar';
 import { DashboardHeader } from '@/components/dashboard/header';
 import { Icons } from '@/components/icons';
-import { LayoutDashboard, TrendingUp, DollarSign, Dog, Swords } from 'lucide-react';
+import { LayoutDashboard, TrendingUp, DollarSign, Dog, Swords, PieChart } from 'lucide-react';
 import Link from 'next/link';
 import { SalesReport } from '@/components/dashboard/sales-report';
 
@@ -63,6 +63,14 @@ export default function SalesReportPage() {
                 <Link href="/competitor-analysis">
                   <Swords />
                   <span>Competitor Analysis</span>
+                </Link>
+              </SidebarMenuButton>
+            </SidebarMenuItem>
+            <SidebarMenuItem>
+              <SidebarMenuButton asChild tooltip="Market Share">
+                <Link href="/market-share">
+                  <PieChart />
+                  <span>Market Share</span>
                 </Link>
               </SidebarMenuButton>
             </SidebarMenuItem>
